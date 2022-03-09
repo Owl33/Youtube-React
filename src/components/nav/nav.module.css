@@ -1,0 +1,41 @@
+.Navbar {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height: 4rem;
+  padding: 0.5em 1em;
+  position: relative;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+.logo img {
+  height: 30px;
+  margin-right: 0.5em;
+}
+
+.searchForm {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 2rem;
+}
+
+.input {
+  width: 100%;
+  outline: 0;
+  padding-left: 0.5em;
+}
+.searchForm button {
+  color: darkgray;
+  outline: 0;
+}
+.searchImg {
+  width: 24px;
+  height: 100%;
+}

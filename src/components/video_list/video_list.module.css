@@ -1,0 +1,13 @@
+.videoSection {
+  display: flex;
+  width: 100vw;
+}
+
+.videoList {
+  display: grid;
+  margin-right: 5vw;
+  width: 85vw;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1%;
+  row-gap: 4%;
+}

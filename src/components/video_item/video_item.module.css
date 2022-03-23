@@ -1,12 +1,29 @@
 .videoCard {
-  /* max-width: 320px; */
+  max-width: 320px;
+  cursor: pointer;
+  transition: transform 300ms ease-in;
+}
+.videoCard:hover {
+  transform: scale(1.08);
+}
+
+.videoCard.detail {
+  display: flex;
+  padding-right: 1rem;
+}
+.videoTitleBox {
+  flex: 1 1 50%;
 }
 .videoThumbnails {
   width: 100%;
-  /* max-width: 320px; */
+}
+.videoThumbnails.detail {
+  width: 50%;
+  margin-right: 0.5rem;
 }
 .videoTitle {
-  font-size: 0.85rem;
+  /* font-weight: bold; */
+  /* font-size: 5rem; */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -16,7 +33,50 @@
   font-family: "Segoe UI";
   line-height: 16px;
 }
+.videoTitle.detail {
+  padding-top: 0;
+  /* line-height: 0; */
+}
 .channelTitle {
-  padding-top: 3%;
-  font-size: 0.7rem;
+  padding-top: 4%;
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 48rem) {
+  .videoCard {
+    max-width: 100%;
+  }
+  .videoCard.detail {
+    padding: 0;
+    margin-right: 1rem;
+  }
+  .videoThumbnails {
+    width: 100%;
+  }
+  .videoTitle {
+    display: block;
+    -webkit-line-clamp: inherit;
+    -webkit-box-orient: inherit;
+    text-overflow: inherit;
+    overflow: inherit;
+  }
+}
+
+@media screen and (min-width: 48.1rem) and (max-width: 1023px) {
+  .videoCard {
+    max-width: 100%;
+  }
+  .videoCard.detail {
+    padding: 0;
+    margin-right: 1rem;
+  }
+  .videoThumbnails {
+    width: 100%;
+  }
+  .videoTitle {
+    display: block;
+    -webkit-line-clamp: inherit;
+    -webkit-box-orient: inherit;
+    text-overflow: inherit;
+    overflow: inherit;
+  }
 }

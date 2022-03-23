@@ -91,7 +91,6 @@ video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
-  color: white;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -132,4 +131,3 @@ table {
 a {
   text-decoration: none;
 }
-

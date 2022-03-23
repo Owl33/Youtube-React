@@ -1,12 +1,13 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import styles from "./nav.module.css";
+import logo from "../../img/logo.png";
+import search from "../../img/search.png";
 
-const Navbar = ({ onSearch }) => {
+const Navbar = memo(({ onSearch, clickLogo }) => {
   const inputRef = useRef();
   const handleSerach = () => {
     const value = inputRef.current.value;
     onSearch(value);
-    console.log(value);
   };
   const onClick = () => {
     handleSerach();
@@ -19,13 +20,17 @@ const Navbar = ({ onSearch }) => {
   const formevent = (event) => {
     event.preventDefault();
   };
+  const onClickLogo = () => {
+    clickLogo();
+  };
+
   return (
     <header>
+      <div className={styles.logo} onClick={onClickLogo}>
+        <img src={logo} alt="logo"></img>
+        <h1>Youtube</h1>
+      </div>
       <nav className={styles.Navbar}>
-        <div className={styles.logo}>
-          <img src="./images/logo.png"></img>
-          <h1>Youtube</h1>
-        </div>
         <form className={styles.searchForm} onSubmit={formevent}>
           <input
             ref={inputRef}
@@ -35,12 +40,12 @@ const Navbar = ({ onSearch }) => {
             onKeyPress={onKeyPress}
           ></input>
           <button type="submit" onClick={onClick}>
-            <img className={styles.searchImg} src="./images/search.png"></img>
+            <img className={styles.searchImg} src={search} alt="search"></img>
           </button>
         </form>
       </nav>
     </header>
   );
-};
+});
 
 export default Navbar;

@@ -1,3 +1,29 @@
 .sideBar {
-  width: 10vw;
+  width: 10%;
+}
+.sideBar.detail {
+  display: none;
+}
+.fontAwesomeimg {
+  width: 2rem;
+  font-size: 2rem;
+}
+@media screen and (max-width: 1023px) {
+  .sideBar {
+    display: none;
+  }
+}
+.sideBar a {
+  font-size: 1rem;
+  display: block;
+  margin: 10px;
+}
+.sideBar span {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .sideBar {
+    width: 15%;
+  }
 }
